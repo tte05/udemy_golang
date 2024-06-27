@@ -1,0 +1,20 @@
+{{template "base" .}} {{define "content"}}
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Welcome to the about Page</h1>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime placeat
+      modi facere velit possimus nesciunt libero sint. Soluta libero enim sequi
+      tenetur aliquid quaerat minus quod sed, doloremque distinctio quasi?
+      <p>
+        Rick's sidekick Morty doesn't really have a catchphrase but likes to say
+        something like {{.StringMap.morty}}
+      </p>
+      <p>
+        {{if ne (index .StringMap "remote_ip") "" }} Your ip address is {{index
+        .StringMap "remote_ip"}} {{else}} You don't have an ip address {{end}}
+      </p>
+    </div>
+  </div>
+</div>
+{{end}}
